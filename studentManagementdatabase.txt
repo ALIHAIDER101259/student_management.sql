@@ -1,0 +1,95 @@
+create table student_management(
+
+name varchar(40),
+id int,
+department varchar(40),
+campus varchar(40),
+semester int
+);
+
+
+insert into student_management (name, id, department, campus, semester)
+values
+
+
+('ali haider',65333,'software-engineering','i-14', 4),
+('usman khan',65334,'network-engineering','i-14', 5),
+('umer',65335,'security-engineering','i-14', 3),
+('haider ali',65336,'web-engineering','i-14', 7),
+('muhammad abu_bakr',65337,'system-engineering','i-14', 8),
+('hussain',65338,'cyber-security','i-14', 6),
+('ahsan',65339,'app developer','i-14', 2);
+
+ 
+-- view all student
+select*from student_management;
+
+
+-- search through id
+
+select*from student_management
+where id=65333;
+
+
+
+-- search through department
+
+select*from student_management
+where department='network-engineering';
+
+
+-- search through campus
+select*from student_management
+where campus='i-14';
+
+
+-- search through semester
+
+select*from student_management
+where semester=4;
+
+
+-- search total students
+
+select count(name) from  student_management;
+
+-- search how many students  in campus 
+select count(campus) from student_management;
+
+
+-- update data 
+
+
+
+update student_management
+set semester=5
+where id=65333;
+
+
+
+select*from student_management;
+
+
+-- delete data
+
+delete  from student_management
+where id=65339;
+
+
+select*from student_management;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
